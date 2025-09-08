@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlproject"
+version = "0.1.0"
+authors = [{name = "ML Engineer"}]
+description = "Credit card fraud detection package"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "joblib",
+]
+
+[project.optional-dependencies]
+pytest = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
